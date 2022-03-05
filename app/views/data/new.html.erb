@@ -1,0 +1,25 @@
+<%= form_with model: @data do |f| %>
+  <h4 class="mb-0">Введите ФИО</h4>
+  <% flash.each do |type, msg| %>
+    <div class="alert alert-info">
+      <%= msg %>
+    </div>
+  <% end %>
+  <div class="mb-1 col-12">
+    <%= f.label :text, "Данные" %>
+    <%= f.label :text, "(вы можете с каждой строки вводить разные данные формата ФАМИЛИЯ ИМЯ ОТЧЕСТВО)",
+                class: "text-muted"  %>
+    <%= f.text_area :text, class: 'form-control', required: true, minlength: 12%>
+
+    <div class="col-md-6 ">
+      <%= f.label :case, "Падеж", class: "form-label" %>
+      <%= f.select :case, [["Родительный", "genitive"], ["Дательный", "dative"], ["Винительный", "accusative"],
+                           ["Творительный", "instrumental"], ["Предложный", "prepositional"]], class:"form-select"%>
+    </div>
+    <hr class="my-4">
+    <%= f.submit "Обработать данные", class: "w-100 btn btn-primary btn-lg" %>
+  </div>
+<% end %>
+</main>
+</div>
+

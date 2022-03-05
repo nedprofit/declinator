@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RealDeclinator</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body class="bg-light">
+  <div class="container">
+    <main>
+      <div class="py-5 text-center">
+        <%= image_tag("manx.png", size: "72x57", :alt => "cat?") -%>
+
+        <h2>Declinator</h2>
+        <p class="lead">Склонение падежей русских имён, фамилий и отчеств.
+          Вы задаёте начальное имя в именительном падеже, а получаете в нужном вам. </p>
+        <%= yield %>
+      </div>
+    </main>
+  </div>
+  </body>
+</html>
