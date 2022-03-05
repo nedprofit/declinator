@@ -5,13 +5,13 @@
       <%= msg %>
     </div>
   <% end %>
-  <div class="mb-1 col-12">
+  <div class="mb-3 col-12">
     <%= f.label :text, "Данные" %>
     <%= f.label :text, "(вы можете с каждой строки вводить разные данные формата ФАМИЛИЯ ИМЯ ОТЧЕСТВО)",
-                class: "text-muted"  %>
+                class: "text-muted mb-2"  %>
     <%= f.text_area :text, class: 'form-control', required: true, minlength: 12%>
 
-    <div class="col-md-6 ">
+    <div class="col-md-2 ">
       <%= f.label :case, "Падеж", class: "form-label" %>
       <%= f.select :case, [["Родительный", "genitive"], ["Дательный", "dative"], ["Винительный", "accusative"],
                            ["Творительный", "instrumental"], ["Предложный", "prepositional"]], class:"form-select"%>
